@@ -16,6 +16,7 @@ namespace SmartGarden_AutoFlow.All_User_Control
         public UC_Control()
         {
             InitializeComponent();
+        
         }
 
         private void chartSensorData_Click(object sender, EventArgs e)
@@ -94,5 +95,12 @@ namespace SmartGarden_AutoFlow.All_User_Control
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
