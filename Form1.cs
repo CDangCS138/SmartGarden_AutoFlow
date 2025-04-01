@@ -39,7 +39,7 @@ namespace SmartGarden_AutoFlow
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "user" && txtPassword.Text == "123")
+            if (txtUsername.Text == "" && txtPassword.Text == "")
             {
                 labelError.Visible = false;
                 Dashboard ds= new Dashboard();
