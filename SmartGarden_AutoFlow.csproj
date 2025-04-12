@@ -90,6 +90,18 @@
     <Compile Include="All User Control\UC_History.Designer.cs">
       <DependentUpon>UC_History.cs</DependentUpon>
     </Compile>
+    <Compile Include="All User Control\UC_Notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User Control\UC_Notification.Designer.cs">
+      <DependentUpon>UC_Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All User Control\UC_Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User Control\UC_Profile.Designer.cs">
+      <DependentUpon>UC_Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="All User Control\UC_User.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +167,12 @@
     <EmbeddedResource Include="All User Control\UC_History.resx">
       <DependentUpon>UC_History.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="All User Control\UC_Notification.resx">
+      <DependentUpon>UC_Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All User Control\UC_Profile.resx">
+      <DependentUpon>UC_Profile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="All User Control\UC_User.resx">
       <DependentUpon>UC_User.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,19 +199,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -205,8 +223,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\minimize_window.png" />
+    <None Include="Resources\female.jpg" />
+    <None Include="Resources\male.jpg" />
+    <None Include="images\bell.png" />
+    <Content Include="images\profile.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
