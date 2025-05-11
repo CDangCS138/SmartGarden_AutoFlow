@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,21 +38,49 @@ namespace SmartGarden_AutoFlow
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private async void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "" && txtPassword.Text == "")
+            labelError.Visible = false;
+            var email = txtUsername.Text.Trim();
+            var password = txtPassword.Text.Trim();
+
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                labelError.Visible = false;
-                Dashboard ds= new Dashboard();
-                this.Hide();
-                ds.Show();
-            }
-            else
-            {
+                labelError.Text = "Vui lòng nhập email và mật khẩu.";
                 labelError.Visible = true;
-                txtPassword.Clear();
+                return;
+            }
+
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    var payload = $"{{\"email\":\"{email}\",\"password\":\"{password}\"}}";
+                    var content = new StringContent(payload, Encoding.UTF8, "application/json");
+                    var resp = await client.PostAsync("http://localhost:3000/signin", content);
+
+                    var token = await resp.Content.ReadAsStringAsync();
+                    if (resp.IsSuccessStatusCode)
+                    {
+                        Program.UserToken = token;
+                        this.Hide();
+                        new Dashboard().Show();
+                    }
+                    else
+                    {
+                        labelError.Text = token;
+                        labelError.Visible = true;
+                        txtPassword.Clear();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                labelError.Text = $"Lỗi kết nối:\n{ex.Message}";
+                labelError.Visible = true;
             }
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {

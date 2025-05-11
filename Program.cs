@@ -11,6 +11,8 @@ namespace SmartGarden_AutoFlow
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static string UserToken { get; set; }
+
         [STAThread]
         static void Main()
         {
