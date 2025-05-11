@@ -149,6 +149,7 @@
             // 
             this.btnControl.BorderRadius = 18;
             this.btnControl.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnControl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnControl.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnControl.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnControl.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -168,6 +169,7 @@
             // 
             this.btnHistory.BorderRadius = 18;
             this.btnHistory.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnHistory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHistory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHistory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -187,6 +189,7 @@
             // 
             this.btnGarden.BorderRadius = 18;
             this.btnGarden.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnGarden.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGarden.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnGarden.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnGarden.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -206,6 +209,7 @@
             // 
             this.btnDevice.BorderRadius = 18;
             this.btnDevice.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDevice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDevice.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDevice.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDevice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -225,6 +229,7 @@
             // 
             this.btnUser.BorderRadius = 18;
             this.btnUser.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

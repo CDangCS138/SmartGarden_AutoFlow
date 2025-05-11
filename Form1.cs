@@ -67,5 +67,11 @@ namespace SmartGarden_AutoFlow
         {
             Application.Exit();
         }
+
+        private void btnGoToRegister_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormRegister().Show();
+        }
     }
 }
