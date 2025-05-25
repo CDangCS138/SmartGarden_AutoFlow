@@ -82,9 +82,9 @@
             this.lblPlantType.Location = new System.Drawing.Point(3, 28);
             this.lblPlantType.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lblPlantType.Name = "lblPlantType";
-            this.lblPlantType.Size = new System.Drawing.Size(68, 19);
+            this.lblPlantType.Size = new System.Drawing.Size(73, 19);
             this.lblPlantType.TabIndex = 1;
-            this.lblPlantType.Text = "Loại cây: ";
+            this.lblPlantType.Text = "Khu vườn:";
             // 
             // lblPlantingDate
             // 

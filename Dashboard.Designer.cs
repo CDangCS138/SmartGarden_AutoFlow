@@ -241,7 +241,7 @@
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(300, 110);
             this.btnUser.TabIndex = 4;
-            this.btnUser.Text = "Người dùng";
+            this.btnUser.Text = "Nhân viên";
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // flowLayoutPanel1

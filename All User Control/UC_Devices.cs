@@ -28,30 +28,26 @@ namespace SmartGarden_AutoFlow.All_User_Control
 
             devices = new BindingList<Device>()
             {
-                new Device
-                {
-                    TenThietBi  = "Sensor nhiệt độ",
-                    LoaiThietBi = "Thiết bị đầu vào",
-                    MaThietBi   = "DHT11",
-                    KhuVuon     = "Nhà kính 1",
-                    TrangThai   = "Bật"
-                },
-                new Device
-                {
-                    TenThietBi  = "Sensor độ ẩm",
-                    LoaiThietBi = "Thiết bị đầu vào",
-                    MaThietBi   = "DHT22",
-                    KhuVuon     = "Nhà kính 2",
-                    TrangThai   = "Tắt"
-                },
-                new Device
-                {
-                    TenThietBi  = "Bơm nước",
-                    LoaiThietBi = "Thiết bị đầu ra",
-                    MaThietBi   = "PUMP01",
-                    KhuVuon     = "Nhà kính 3",
-                    TrangThai   = "Bật"
-                }
+                new Device { TenThietBi = "Cảm biến độ ẩm không khí", LoaiThietBi = "Thiết bị đầu vào", MaThietBi = "DHT11", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Cảm biến nhiệt độ", LoaiThietBi = "Thiết bị đầu vào", MaThietBi = "DHT22", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Cảm biến độ ẩm đất", LoaiThietBi = "Thiết bị đầu vào", MaThietBi = "SoilMoisture01", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Cảm biến mưa", LoaiThietBi = "Thiết bị đầu vào", MaThietBi = "RainSensor", KhuVuon = "Khu vườn 1", TrangThai = "Tắt" },
+                new Device { TenThietBi = "Máy bơm nước chính", LoaiThietBi = "Thiết bị đầu ra", MaThietBi = "Pump01", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Van tưới khu A", LoaiThietBi = "Thiết bị đầu ra", MaThietBi = "ValveA", KhuVuon = "Khu vườn 1", TrangThai = "Tắt" },
+                new Device { TenThietBi = "Van tưới khu B", LoaiThietBi = "Thiết bị đầu ra", MaThietBi = "ValveB", KhuVuon = "Khu vườn 1", TrangThai = "Tắt" },
+                new Device { TenThietBi = "Cảm biến ánh sáng", LoaiThietBi = "Thiết bị đầu vào", MaThietBi = "LDR01", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Relay điều khiển đèn", LoaiThietBi = "Thiết bị đầu ra", MaThietBi = "RelayLight", KhuVuon = "Khu vườn 1", TrangThai = "Tắt" },
+                new Device { TenThietBi = "Hệ thống quạt gió", LoaiThietBi = "Thiết bị đầu ra", MaThietBi = "FanSys", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Cảm biến CO2", LoaiThietBi = "Thiết bị đầu vào", MaThietBi = "CO2Sensor", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Đồng hồ thời gian tưới", LoaiThietBi = "Thiết bị điều khiển", MaThietBi = "Timer01", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Điều khiển độ ẩm", LoaiThietBi = "Thiết bị điều khiển", MaThietBi = "HumidityCtrl", KhuVuon = "Khu vườn 1", TrangThai = "Tắt" },
+                new Device { TenThietBi = "Cảm biến pH đất", LoaiThietBi = "Thiết bị đầu vào", MaThietBi = "pHSensor", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Cảm biến nhiệt độ nước", LoaiThietBi = "Thiết bị đầu vào", MaThietBi = "WaterTemp", KhuVuon = "Khu vườn 1", TrangThai = "Tắt" },
+                new Device { TenThietBi = "Camera giám sát", LoaiThietBi = "Thiết bị đầu vào", MaThietBi = "Camera01", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Relay máy phun sương", LoaiThietBi = "Thiết bị đầu ra", MaThietBi = "RelayMist", KhuVuon = "Khu vườn 1", TrangThai = "Tắt" },
+                new Device { TenThietBi = "Máy tạo ẩm", LoaiThietBi = "Thiết bị đầu ra", MaThietBi = "Humidifier", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Bộ thu thập dữ liệu trung tâm", LoaiThietBi = "Thiết bị trung tâm", MaThietBi = "DataHub", KhuVuon = "Khu vườn 1", TrangThai = "Bật" },
+                new Device { TenThietBi = "Cảm biến gió", LoaiThietBi = "Thiết bị đầu vào", MaThietBi = "WindSensor", KhuVuon = "Khu vườn 1", TrangThai = "Tắt" }
             };
 
             dataDevices.DataSource = devices;

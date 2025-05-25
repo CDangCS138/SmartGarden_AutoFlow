@@ -32,7 +32,7 @@ namespace SmartGarden_AutoFlow.All_User_Control
                 Email = "vana@example.com",
                 PhoneNumber = "0123456789",
                 Address = "123 Đường ABC, Quận 1",
-                Gender = "Nữ",
+                Gender = "Nam",
                 Password = "123456"
             };
 

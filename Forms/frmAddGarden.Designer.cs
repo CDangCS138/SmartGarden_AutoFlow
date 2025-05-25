@@ -52,12 +52,12 @@
             this.cboStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
+            this.checkedListSensor = new System.Windows.Forms.CheckedListBox();
+            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.checkedListSensor = new System.Windows.Forms.CheckedListBox();
-            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -101,9 +101,9 @@
             this.label1.Location = new System.Drawing.Point(3, 5);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 46);
+            this.label1.Size = new System.Drawing.Size(123, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Loại cây: ";
+            this.label1.Text = "Khu vườn: ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtPlantType
@@ -117,12 +117,12 @@
             this.txtPlantType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPlantType.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlantType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPlantType.Location = new System.Drawing.Point(118, 7);
+            this.txtPlantType.Location = new System.Drawing.Point(135, 7);
             this.txtPlantType.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtPlantType.Name = "txtPlantType";
             this.txtPlantType.PlaceholderText = "";
             this.txtPlantType.SelectedText = "";
-            this.txtPlantType.Size = new System.Drawing.Size(590, 44);
+            this.txtPlantType.Size = new System.Drawing.Size(571, 44);
             this.txtPlantType.TabIndex = 1;
             this.txtPlantType.TextChanged += new System.EventHandler(this.txtPlantType_TextChanged);
             // 
@@ -375,6 +375,45 @@
             this.label9.Text = "Cảm biến:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // checkedListSensor
+            // 
+            this.checkedListSensor.FormattingEnabled = true;
+            this.checkedListSensor.Items.AddRange(new object[] {
+            "Cảm biến độ ẩm không khí",
+            "Cảm biến nhiệt độ",
+            "Cảm biến độ ẩm đất",
+            "Cảm biến mưa",
+            "Máy bơm nước chính",
+            "Van tưới khu A",
+            "Van tưới khu B",
+            "Cảm biến ánh sáng",
+            "Relay điều khiển đèn",
+            "Hệ thống quạt gió",
+            "Cảm biến CO2",
+            "Đồng hồ thời gian tưới",
+            "Điều khiển độ ẩm",
+            "Cảm biến pH đất",
+            "Cảm biến nhiệt độ nước",
+            "Camera giám sát",
+            "Relay máy phun sương",
+            "Máy tạo ẩm",
+            "Bộ thu thập dữ liệu trung tâm",
+            "Cảm biến gió"});
+            this.checkedListSensor.Location = new System.Drawing.Point(132, 3);
+            this.checkedListSensor.Name = "checkedListSensor";
+            this.checkedListSensor.Size = new System.Drawing.Size(149, 229);
+            this.checkedListSensor.TabIndex = 10;
+            // 
+            // flowLayoutPanel10
+            // 
+            this.flowLayoutPanel10.Controls.Add(this.flowLayoutPanel9);
+            this.flowLayoutPanel10.Controls.Add(this.btnSave);
+            this.flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(287, 3);
+            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(419, 239);
+            this.flowLayoutPanel10.TabIndex = 12;
+            // 
             // flowLayoutPanel9
             // 
             this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
@@ -382,6 +421,24 @@
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             this.flowLayoutPanel9.Size = new System.Drawing.Size(415, 178);
             this.flowLayoutPanel9.TabIndex = 11;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.BorderRadius = 8;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnSave.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(286, 187);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(130, 42);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label2
             // 
@@ -413,48 +470,6 @@
             this.btnExit.Size = new System.Drawing.Size(30, 30);
             this.btnExit.TabIndex = 1;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // checkedListSensor
-            // 
-            this.checkedListSensor.FormattingEnabled = true;
-            this.checkedListSensor.Items.AddRange(new object[] {
-            "Cảm biến 1",
-            "Cảm biến 2",
-            "Cảm biến 3",
-            "Cảm biến 4",
-            "Cảm biến 5"});
-            this.checkedListSensor.Location = new System.Drawing.Point(132, 3);
-            this.checkedListSensor.Name = "checkedListSensor";
-            this.checkedListSensor.Size = new System.Drawing.Size(149, 229);
-            this.checkedListSensor.TabIndex = 10;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.BorderRadius = 8;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btnSave.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(286, 187);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(130, 42);
-            this.btnSave.TabIndex = 9;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // flowLayoutPanel10
-            // 
-            this.flowLayoutPanel10.Controls.Add(this.flowLayoutPanel9);
-            this.flowLayoutPanel10.Controls.Add(this.btnSave);
-            this.flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel10.Location = new System.Drawing.Point(287, 3);
-            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
-            this.flowLayoutPanel10.Size = new System.Drawing.Size(419, 239);
-            this.flowLayoutPanel10.TabIndex = 12;
             // 
             // frmAddGarden
             // 

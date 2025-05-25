@@ -65,8 +65,46 @@ namespace SmartGarden_AutoFlow.All_User_Control
 
         private void UC_Garden_Load(object sender, EventArgs e)
         {
+            UC_GardenCard card = new UC_GardenCard();
+            card.SetData(
+                "Khu vườn 1",                      
+                DateTime.Today.AddDays(-10),      
+                DateTime.Today.AddDays(50),       
+                "Đang phát triển",               
+                new List<string> { "Cảm biến nhiệt độ", "Cảm biến độ ẩm" } 
+            );
 
+            card.btnRemoveGarden.Click += (s, args) =>
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa garden này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    flowLayoutGarden.Controls.Remove(card);
+                }
+            };
+            card.btnEditGarden.Click += (s, args) =>
+            {
+                frmEditGarden editForm = new frmEditGarden();
+                editForm.PlantType = card.CurrentPlantType;
+                editForm.PlantingDate = card.CurrentPlantingDate;
+                editForm.HarvestDate = card.CurrentHarvestDate;
+                editForm.Status = card.CurrentStatus;
+                editForm.SelectedSensors = new List<string>(card.CurrentSensors);
+
+                if (editForm.ShowDialog() == DialogResult.OK)
+                {
+                    card.SetData(
+                        editForm.PlantType,
+                        editForm.PlantingDate,
+                        editForm.HarvestDate,
+                        editForm.Status,
+                        editForm.SelectedSensors
+                    );
+                }
+            };
+
+            flowLayoutGarden.Controls.Add(card);
         }
+
 
         private void uC_GardenCard1_Load(object sender, EventArgs e)
         {

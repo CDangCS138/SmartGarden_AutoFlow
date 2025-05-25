@@ -29,25 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.circleTemperature = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.circleSoil = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.circleAir = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.circleLight = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.chartSensorData = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.togglePump = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.trackBarPumpIntensity = new Guna.UI2.WinForms.Guna2TrackBar();
             this.label2 = new System.Windows.Forms.Label();
-            this.toggleLight = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.autoPump = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numWaterPeriod = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numWaterHour = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chartSensorData)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numWaterPeriod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numWaterHour)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // circleTemperature
@@ -101,79 +107,33 @@
             this.circleAir.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Value;
             this.circleAir.ValueChanged += new System.EventHandler(this.circleAir_ValueChanged);
             // 
-            // circleLight
-            // 
-            this.circleLight.BackColor = System.Drawing.Color.Transparent;
-            this.circleLight.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.circleLight.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold);
-            this.circleLight.ForeColor = System.Drawing.Color.DarkGray;
-            this.circleLight.Location = new System.Drawing.Point(1562, 330);
-            this.circleLight.Maximum = 120;
-            this.circleLight.Minimum = 0;
-            this.circleLight.Name = "circleLight";
-            this.circleLight.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.circleLight.ShowText = true;
-            this.circleLight.Size = new System.Drawing.Size(228, 228);
-            this.circleLight.TabIndex = 4;
-            this.circleLight.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Value;
-            this.circleLight.ValueChanged += new System.EventHandler(this.circleLight_ValueChanged);
-            // 
             // chartSensorData
             // 
-            chartArea2.AxisX.Interval = 1D;
-            chartArea2.AxisX.IsLabelAutoFit = false;
-            chartArea2.AxisX.LabelStyle.Angle = -45;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.Gray;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea2.AxisX.Title = "Ngày";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisX.TitleForeColor = System.Drawing.Color.DarkGray;
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            chartArea2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            chartArea2.BackSecondaryColor = System.Drawing.Color.White;
-            chartArea2.BorderColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chartSensorData.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.Transparent;
-            legend2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.ForeColor = System.Drawing.Color.DarkGray;
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            this.chartSensorData.Legends.Add(legend2);
+            chartArea1.AxisX.Interval = 1D;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Angle = -45;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.Gray;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.Title = "Thời gian";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.DarkGray;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            chartArea1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.White;
+            chartArea1.BorderColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chartSensorData.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.ForeColor = System.Drawing.Color.DarkGray;
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.chartSensorData.Legends.Add(legend1);
             this.chartSensorData.Location = new System.Drawing.Point(93, 38);
             this.chartSensorData.Name = "chartSensorData";
-            series5.BorderWidth = 3;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Color = System.Drawing.Color.Red;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            series6.BorderWidth = 3;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Color = System.Drawing.Color.DeepSkyBlue;
-            series6.Legend = "Legend1";
-            series6.Name = "Series2";
-            series7.BorderWidth = 3;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Color = System.Drawing.Color.SeaGreen;
-            series7.Legend = "Legend1";
-            series7.Name = "Series3";
-            series8.BorderWidth = 3;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Color = System.Drawing.Color.Goldenrod;
-            series8.Legend = "Legend1";
-            series8.Name = "Series4";
-            this.chartSensorData.Series.Add(series5);
-            this.chartSensorData.Series.Add(series6);
-            this.chartSensorData.Series.Add(series7);
-            this.chartSensorData.Series.Add(series8);
             this.chartSensorData.Size = new System.Drawing.Size(1071, 533);
             this.chartSensorData.TabIndex = 5;
             this.chartSensorData.Text = "chart1";
-            this.chartSensorData.Click += new System.EventHandler(this.chartSensorData_Click);
             // 
             // guna2Elipse1
             // 
@@ -183,12 +143,13 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.label1);
-            this.flowLayoutPanel2.Controls.Add(this.togglePump);
+            this.flowLayoutPanel2.Controls.Add(this.trackBarPumpIntensity);
+            this.flowLayoutPanel2.Controls.Add(this.label7);
             this.flowLayoutPanel2.Controls.Add(this.label2);
-            this.flowLayoutPanel2.Controls.Add(this.toggleLight);
+            this.flowLayoutPanel2.Controls.Add(this.autoPump);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(93, 634);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(335, 112);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(533, 112);
             this.flowLayoutPanel2.TabIndex = 7;
             // 
             // label1
@@ -203,21 +164,17 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // togglePump
+            // trackBarPumpIntensity
             // 
-            this.togglePump.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.togglePump.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.togglePump.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.togglePump.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.togglePump.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.togglePump.Location = new System.Drawing.Point(133, 3);
-            this.togglePump.Name = "togglePump";
-            this.togglePump.Size = new System.Drawing.Size(133, 45);
-            this.togglePump.TabIndex = 4;
-            this.togglePump.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.togglePump.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.togglePump.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.togglePump.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.trackBarPumpIntensity.LargeChange = 25;
+            this.trackBarPumpIntensity.Location = new System.Drawing.Point(133, 3);
+            this.trackBarPumpIntensity.Maximum = 255;
+            this.trackBarPumpIntensity.Name = "trackBarPumpIntensity";
+            this.trackBarPumpIntensity.Size = new System.Drawing.Size(300, 45);
+            this.trackBarPumpIntensity.SmallChange = 5;
+            this.trackBarPumpIntensity.TabIndex = 0;
+            this.trackBarPumpIntensity.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.trackBarPumpIntensity.Scroll += new System.Windows.Forms.ScrollEventHandler(this.trackBarPumpIntensity_Scroll);
             // 
             // label2
             // 
@@ -227,31 +184,129 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 43);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Đèn: ";
+            this.label2.Text = "Thủ công: ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // toggleLight
+            // autoPump
             // 
-            this.toggleLight.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.toggleLight.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.toggleLight.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.toggleLight.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.toggleLight.Location = new System.Drawing.Point(133, 54);
-            this.toggleLight.Name = "toggleLight";
-            this.toggleLight.Size = new System.Drawing.Size(133, 45);
-            this.toggleLight.TabIndex = 5;
-            this.toggleLight.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.toggleLight.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.toggleLight.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.toggleLight.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.autoPump.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.autoPump.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.autoPump.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.autoPump.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.autoPump.Location = new System.Drawing.Point(133, 54);
+            this.autoPump.Name = "autoPump";
+            this.autoPump.Size = new System.Drawing.Size(133, 45);
+            this.autoPump.TabIndex = 5;
+            this.autoPump.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.autoPump.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.autoPump.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.autoPump.UncheckedState.InnerColor = System.Drawing.Color.White;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(318, 56);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 46);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "s";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // numWaterPeriod
+            // 
+            this.numWaterPeriod.BackColor = System.Drawing.Color.Transparent;
+            this.numWaterPeriod.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numWaterPeriod.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numWaterPeriod.Location = new System.Drawing.Point(212, 54);
+            this.numWaterPeriod.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numWaterPeriod.Name = "numWaterPeriod";
+            this.numWaterPeriod.Size = new System.Drawing.Size(100, 45);
+            this.numWaterPeriod.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(3, 56);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(203, 43);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Thời gian tưới:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(318, 5);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 46);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "h";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // numWaterHour
+            // 
+            this.numWaterHour.BackColor = System.Drawing.Color.Transparent;
+            this.numWaterHour.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numWaterHour.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numWaterHour.Location = new System.Drawing.Point(212, 3);
+            this.numWaterHour.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.numWaterHour.Name = "numWaterHour";
+            this.numWaterHour.Size = new System.Drawing.Size(100, 45);
+            this.numWaterHour.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(3, 5);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 46);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Giờ tưới mỗi ngày: ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label3);
+            this.flowLayoutPanel1.Controls.Add(this.numWaterHour);
+            this.flowLayoutPanel1.Controls.Add(this.label5);
+            this.flowLayoutPanel1.Controls.Add(this.label4);
+            this.flowLayoutPanel1.Controls.Add(this.numWaterPeriod);
+            this.flowLayoutPanel1.Controls.Add(this.label6);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1261, 639);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(362, 112);
+            this.flowLayoutPanel1.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 20F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(439, 5);
+            this.label7.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 46);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "0";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // UC_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.chartSensorData);
-            this.Controls.Add(this.circleLight);
             this.Controls.Add(this.circleAir);
             this.Controls.Add(this.circleSoil);
             this.Controls.Add(this.circleTemperature);
@@ -261,6 +316,9 @@
             this.Load += new System.EventHandler(this.UC_Control_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartSensorData)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numWaterPeriod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numWaterHour)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -269,13 +327,20 @@
         private Guna.UI2.WinForms.Guna2CircleProgressBar circleTemperature;
         private Guna.UI2.WinForms.Guna2CircleProgressBar circleSoil;
         private Guna.UI2.WinForms.Guna2CircleProgressBar circleAir;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar circleLight;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartSensorData;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch togglePump;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch toggleLight;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch autoPump;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2NumericUpDown numWaterHour;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2NumericUpDown numWaterPeriod;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2TrackBar trackBarPumpIntensity;
+        private System.Windows.Forms.Label label7;
     }
 }

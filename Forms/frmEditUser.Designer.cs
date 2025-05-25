@@ -91,7 +91,7 @@
             this.btnRemoveUser.Name = "btnRemoveUser";
             this.btnRemoveUser.Size = new System.Drawing.Size(148, 42);
             this.btnRemoveUser.TabIndex = 9;
-            this.btnRemoveUser.Text = "Xóa người dùng";
+            this.btnRemoveUser.Text = "Xóa nhân viên";
             this.btnRemoveUser.Click += new System.EventHandler(this.btnRemoveUser_Click);
             // 
             // label9
@@ -343,7 +343,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(801, 38);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Chỉnh sửa người dùng";
+            this.label2.Text = "Chỉnh sửa nhân viên";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmEditUser
